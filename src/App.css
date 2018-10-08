@@ -1,32 +1,139 @@
-.App {
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body {
+  font-family: Montserrat, cursive;
+  font-size: 14px;
+  background: #ecf0f1;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #111111;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
   text-align: center;
+  padding: 16px;
+  text-decoration: none;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+li a:hover {
+  background-color: #333333;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+input, select {
+-webkit-appearance: textfield;
+background-color: none;
+-webkit-rtl-ordering: logical;
+cursor: text;
+padding: 1px;
+border-style: none;
+border-image: none;
+border-bottom: 1px solid grey;
+background: none;
+font-family: Montserrat, cursive;
+}
+
+button, textarea:focus, input:focus, select:focus{
+  outline: none;
+  background: none;
+  border: none;
+  padding: 0px;
+}
+
+#grid-header, .item  {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  justify-content: start;
+  align-content: space-evenly;
+  height: 25px;
+  padding: 10px;
+}
+
+#grid-header {
+  background: #F7CE3E;
+  margin-top: 20px;
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+  display:grid;
+}
+
+.item {
+  border-bottom: 1px solid rgba(153, 151, 151, 0.3);
+}
+
+.row-bar {
+  width: 100%;
+}
+.search-bar {
+  width: 90%;
+  display: inline-block;
+}
+
+.pagination {
+  width: 10%;
+  display: inline-block;
+  text-align: right;
+}
+
+.app {
+  position: relative;
+}
+
+.edit-form {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 370px;
+  height: 220px;
+  margin: auto;
+  background: black;
+  opacity: 0.9;
+  border-radius: 5px;
+  color: white;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.edit-form-input {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 10px;
+  justify-content: start;
+  align-content: space-evenly;
+}
+
+.edit-form-input > div {
+  height: 40px;
+}
+
+.edit-form-input input {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.edit-form #update {
+  background: #F7CE3E;
+  width: 100%;
+  height: 45px;
+  border-radius: 3px;
+  opacity: 0.9;
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.3);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
